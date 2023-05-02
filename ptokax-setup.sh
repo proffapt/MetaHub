@@ -65,7 +65,7 @@ REPO_UPDATE_STATUS=$(grep -q "http://deb.debian.org/debian bullseye" /etc/apt/so
 if [ "$REPO_UPDATE_STATUS" == "false" ]; then
   echo -e "${GREEN}[+] ${BLUE}Configuring sources.list${WHITE}"
     
-	cat <<- EOF > /etc/apt/sources.list
+	sudo bash -c "cat <<- EOF > /etc/apt/sources.list
     deb [allow-insecure=yes trusted=yes] http://deb.debian.org/debian bullseye main contrib non-free
     deb [allow-insecure=yes trusted=yes] http://security.debian.org/debian-security bullseye-security main contrib non-free
     deb [allow-insecure=yes trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free
@@ -73,7 +73,7 @@ if [ "$REPO_UPDATE_STATUS" == "false" ]; then
     #deb-src http://deb.debian.org/debian bullseye main contrib non-free
     #deb-src http://security.debian.org/debian-security bullseye-security main contrib non-free
     #deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
-	EOF
+	EOF"
 else
 	echo -e "${YELLOW}[-] ${BLUE}sources.list already configured${WHITE}"
 fi
