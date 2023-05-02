@@ -1,7 +1,17 @@
+# MetaHub
+
+MetaHub is a Direct Connect ([DC](https://en.wikipedia.org/wiki/Advanced_Direct_Connect)) Hub for IIT Kharagpur. It is a private hub and can only be accessed from within the IIT Kharagpur network. Users can connect to this hub using DC clients and share files at high speeds. The popular hub, "[HiT Hi FiT Hai](https://wiki.metakgp.org/w/HiT_Hi_FiT_Hai)," can also be accessed using this service. The purpose of this repository is to document the server's internal configuration. If you wish to connect to the hub, please refer to the following guide: https://proffapt.hashnode.dev/dc-client-setup.
+
+## Host Device Specifications
+
 Raspberry Pi 4 Model B Rev 1.1 ( 2 GB ) \
 OS : Rasbian 64 Bit
 
+## Setting up the server
+
 - [Searching the Pi and SSH](#searching-the-pi-and-ssh)
+    - [Automatic Searching](#automatic-searching)
+    - [Manual Searching](#manual-searching)
 - [Installing Ptokax on Raspberry Pi](#installing-ptokax-on-raspberry-pi)
     - [Automatic Installation](#automatic-installation)
     - [Manual Installation](#manual-installation)
@@ -11,7 +21,7 @@ OS : Rasbian 64 Bit
     - Changing the Share limit
 - [Changes Made to HHFH Version](#changes-made-to-ptokax-hhfh-version)
 
-# Searching the Pi and SSH
+### Searching the Pi and SSH
 
 1. Install the following dependencies based on your system:
    - Linux
@@ -28,11 +38,11 @@ OS : Rasbian 64 Bit
    - [Manual Searching](#manual-searching)
 4. Now ssh to the pi : `ssh pi@IP`. If it is a new install, then the password will be `raspberrypi`.
 
-### Automatic Searching
+#### Automatic Searching
 
 Run the follwoing set of commands to get the `ipofpi.sh` script and execute it.
 ```bash
-git clone https://github.com/proffapt/ptokax --depth 1 --branch automate-hub-setup --single-branch MetaHub
+git clone https://github.com/proffapt/MetaHub --depth 1 --branch automate-hub-setup --single-branch MetaHub
 mv MetaHub/ipofpi.sh ./
 chmod +x ipofpi.sh
 rm -rf MetaHub
@@ -40,7 +50,7 @@ rm -rf MetaHub
 ```
 <!-- Todo: Change the above with below
 ```bash
-git clone https://github.com/sheharyaar/ptokax --depth 1 --branch main --single-branch MetaHub
+git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch MetaHub
 mv MetaHub/ipofpi.sh ./
 chmod +x ipofpi.sh
 rm -rf MetaHub
@@ -50,7 +60,7 @@ rm -rf MetaHub
    
    > **Note** All this drama needs to be done because there is a high chance that https://raw.githubusercontent.com will be blocked on campus network :)
   
-### Manual Searching
+#### Manual Searching
 
 - Check your ethernet interface name by running : `ip addr`. <br>
 In my case it's `eth0`.
@@ -85,13 +95,13 @@ Host: 10.112.5.167 ()	Status: Up
 Host: 10.112.5.167 ()	Ports: 22/open/tcp//ssh///	OS: Linux 4.15 - 5.6	Seq Index: 260	IP ID Seq: All zeros
 ```
 
-# Installing Ptokax on Raspberry Pi
+### Installing Ptokax on Raspberry Pi
 
-## Automatic Installation
+#### Automatic Installation
 
 First __clone__ the repository in a _structured manner_ and _remove unnecessary files_, then execute the setup script using the following set of commands.
 ```bash
-git clone https://github.com/proffapt/ptokax --depth 1 --branch automate-hub-setup --single-branch /home/pi/MetaHub
+git clone https://github.com/proffapt/MetaHub --depth 1 --branch automate-hub-setup --single-branch /home/pi/MetaHub
 sudo rm -rf /home/pi/MetaHub/.git /home/pi/MetaHub/README.md /home/pi/MetaHub/ipofpi.sh
 chmod +x /home/pi/MetaHub/ptokax-setup.sh
 ./MetaHub/ptokax-setup.sh
@@ -99,7 +109,7 @@ source ~/.bashrc
 ```
 <!-- Todo: Change the above with below
 ```bash
-git clone https://github.com/sheharyaar/ptokax --depth 1 --branch main --single-branch /home/pi/MetaHub
+git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch /home/pi/MetaHub
 sudo rm -rf /home/pi/MetaHub/.git /home/pi/MetaHub/README.md /home/pi/MetaHub/ipofpi.sh
 chmod +x /home/pi/MetaHub/ptokax-setup.sh
 ./MetaHub/ptokax-setup.sh
@@ -115,7 +125,7 @@ And, after completing the above steps use the below commands to achieve the spec
 - To check the status of PtokaX server: `ptokax.status`
 - To configure the PtokaX server: `ptokax.config`
 
-## Manual Installation
+#### Manual Installation
 
 The first step involves getting the IP address of the Raspberry Pi assigned to it.
 
@@ -158,7 +168,7 @@ Add to the end of the config. If it is already there and commented out using # t
     static domain_name_servers=DNS_ADDRESS
     ```
 
-## BUG-FIX: Ban followed by wrong redirection
+#### BUG-FIX: Ban followed by wrong redirection
 
 > **Note** This bug exists only if the setup is a fresh install otherwise this has already been addressed in [3ae699421373c49c6a640e927222a76f68f07835](https://github.com/sheharyaar/ptokax/commit/3ae699421373c49c6a640e927222a76f68f07835) - refer it for more information as well.
 
@@ -199,7 +209,7 @@ In this bug users are sometimes redirected to the wrong hub address and are bann
   # Hublist register servers. Maximal length 1024
   ```
   
-## Running Scripts
+### Running Scripts
 
 Repositories with all the PtokaX Scripts : [https://github.com/sheharyaar/ptokax-scripts](https://github.com/sheharyaar/ptokax-scripts)
 
@@ -218,7 +228,7 @@ Repositories with all the PtokaX Scripts : [https://github.com/sheharyaar/ptokax
   !startscript restrictions.lua
   ```
 
-## Changes made to Ptokax HHFH version
+### Changes made to Ptokax HHFH version
 
 - Fixed errors in compilation
 
