@@ -61,29 +61,12 @@ if [ "$ALIAS_CONFIGURED" == "false" ]; then
 	source /home/pi/.bashrc
 fi
 
-REPO_UPDATE_STATUS=$(grep -q "http://deb.debian.org/debian bullseye" /etc/apt/sources.list && echo true || echo false)
-if [ "$REPO_UPDATE_STATUS" == "false" ]; then
-  echo -e "${GREEN}[+] ${BLUE}Configuring sources.list${WHITE}"
-    
-	sudo bash -c "cat <<- EOF > /etc/apt/sources.list
-    deb [allow-insecure=yes trusted=yes] http://deb.debian.org/debian bullseye main contrib non-free
-    deb [allow-insecure=yes trusted=yes] http://security.debian.org/debian-security bullseye-security main contrib non-free
-    deb [allow-insecure=yes trusted=yes] http://deb.debian.org/debian bullseye-updates main contrib non-free
-    # Uncomment deb-src lines below then 'apt-get update' to enable 'apt-get source'
-    #deb-src http://deb.debian.org/debian bullseye main contrib non-free
-    #deb-src http://security.debian.org/debian-security bullseye-security main contrib non-free
-    #deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
-	EOF"
-else
-	echo -e "${YELLOW}[-] ${BLUE}sources.list already configured${WHITE}"
-fi
-  
 echo -e "${GREEN}[+] ${BLUE}Installing / Updating required packages${WHITE}"
 # Curl for downloading source code
 # mysql - required for scripts
 # LUA 5.2.2 - Latest lua not installed as scripts are in lua version 5.2.2
 sudo apt-get update
-sudo apt-get install -y libssl1.1=1.1.1n-0+deb11u4 curl liblua5.2-dev make g++ zlib1g-dev libtinyxml-dev default-libmysqlclient-dev lua-sql-mysql libcap2-bin
+sudo apt-get install -y curl liblua5.2-dev make g++ zlib1g-dev libtinyxml-dev default-libmysqlclient-dev lua-sql-mysql libcap2-bin
 sudo apt-get autoremove -y
 
 # Editing SettingDefaults.h file
