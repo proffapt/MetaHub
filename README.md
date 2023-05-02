@@ -48,7 +48,7 @@ rm -rf MetaHub
 ```
 -->
    
-   > **Note** All this drama needs to be done because https://raw.githubusercontent.com is blocked on campus network :)
+   > **Note** All this drama needs to be done because there is a high chance that https://raw.githubusercontent.com will be blocked on campus network :)
   
 ### Manual Searching
 
@@ -107,7 +107,7 @@ source ~/.bashrc
 ```
 -->
 
-   > **Note** All this drama needs to be done because https://raw.githubusercontent.com is blocked on campus network :)
+   > **Note** All this drama needs to be done because there is a high chance that https://raw.githubusercontent.com will be blocked on campus network :)
   
 And, after completing the above steps use the below commands to achieve the specified tasks:
 - To start the Ptokax server: `ptokax.start`
