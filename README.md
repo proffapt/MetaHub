@@ -43,21 +43,12 @@ OS : Rasbian 64 Bit
 
 Run the follwoing set of commands to get the `ipofpi.sh` script and execute it.
 ```bash
-git clone https://github.com/proffapt/MetaHub --depth 1 --branch automate-hub-setup --single-branch MetaHub
-mv MetaHub/ipofpi.sh ./
-chmod +x ipofpi.sh
-rm -rf MetaHub
-./ipofpi.sh
-```
-<!-- Todo: Change the above with below
-```bash
 git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch MetaHub
 mv MetaHub/ipofpi.sh ./
 chmod +x ipofpi.sh
 rm -rf MetaHub
 ./ipofpi.sh
 ```
--->
    
    > **Note** All this drama needs to be done because there is a high chance that https://raw.githubusercontent.com will be blocked on campus network :)
   
@@ -100,21 +91,12 @@ In my case it's `eth0`.
 
 1. __Clone__ the repository in a _structured manner_ and _remove unnecessary files_, then execute the setup script using the following set of commands.
     ```bash
-    git clone https://github.com/proffapt/MetaHub --depth 1 --branch automate-hub-setup --single-branch /home/pi/MetaHub
-    sudo rm -rf /home/pi/MetaHub/.git /home/pi/MetaHub/README.md /home/pi/MetaHub/ipofpi.sh
-    chmod +x /home/pi/MetaHub/ptokax-setup.sh
-    ./MetaHub/ptokax-setup.sh
-    source ~/.bashrc
-    ```
-    <!-- Todo: Change the above with below
-    ```bash
     git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch /home/pi/MetaHub
     sudo rm -rf /home/pi/MetaHub/.git /home/pi/MetaHub/README.md /home/pi/MetaHub/ipofpi.sh
     chmod +x /home/pi/MetaHub/ptokax-setup.sh
     ./MetaHub/ptokax-setup.sh
     source ~/.bashrc
     ```
-    -->
 
    > **Note** All this drama needs to be done because there is a high chance that https://raw.githubusercontent.com will be blocked on campus network :)
   
