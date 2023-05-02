@@ -74,6 +74,10 @@ def main(retry):
             execo(['/usr/bin/sed', '-i', '/#Static IP for PtokaX/,$d', '/etc/dhcpcd.conf'])
             output = f'Removed the incorrect STATIC IP configuration'
             print(output) # TODO: Remove this statement
+            execo(['/usr/bin/sudo', 'service', 'dhcpcd', 'restart'])
+            output = f'Restarted dhcpcd service'
+            retry = -1
+            print(output) # TODO: Remove this statement
             # output_on_led(output)
             
         print("Retrying in 15 seconds")
