@@ -83,7 +83,7 @@ echo -e "${GREEN}[+] ${BLUE}Installing / Updating required packages${WHITE}"
 # mysql - required for scripts
 # LUA 5.2.2 - Latest lua not installed as scripts are in lua version 5.2.2
 sudo apt-get update
-sudo apt-get install -y libssl-dev=1.1.1n-0+deb11u4+rpt1 curl liblua5.2-dev make g++ zlib1g-dev libtinyxml-dev default-libmysqlclient-dev lua-sql-mysql libcap2-bin
+sudo apt-get install -y libssl1.1=1.1.1n-0+deb11u4 curl liblua5.2-dev make g++ zlib1g-dev libtinyxml-dev default-libmysqlclient-dev lua-sql-mysql libcap2-bin
 sudo apt-get autoremove -y
 
 # Editing SettingDefaults.h file
