@@ -1,6 +1,6 @@
 import netifaces
 import time
-from subprocess import check_output as execo
+from subprocess import check_output as execo, CalledProcessError as IPNotProperlyAssigned
 # import RPi.GPIO as PI
 
 
@@ -57,28 +57,22 @@ def get_interface_adddress(itf_name):
 def main(retry):
     try:
         addr = get_interface_adddress("eth0")
+        execo(['/usr/bin/curl', '-I', 'https://www.google.com'])
 
     except InterfaceNotFoundException as e:
         print(e)
         exit(1)
 
-    except IPNotFoundException as e:
+    except ( IPNotFoundException, IPNotProperlyAssigned ) as e:
         print(e)
         if retry > 0:
-            # handling dhcp stuff
-            '''
-            execl("/usr/bin/sed", "sed", "-i", '/#Static IP for PtokaX/q;/#Static IP for PtokaX/d;', "/etc/dhcpcd.conf") -> replaces the main process image
-            system("/usr/bin/sed -i '/#Static IP for PtokaX/q;/#Static IP for PtokaX/d;' /etc/dhcpcd.conf") -> deprecated
-            '''
             ## removing static ip config lines and storing output
             execo(['/usr/bin/sed', '-i', '/#Static IP for PtokaX/,$d', '/etc/dhcpcd.conf'])
-            output = f'Removed the incorrect STATIC IP configuration'
-            print(output) # TODO: Remove this statement
-            execo(['/usr/bin/sudo', 'service', 'dhcpcd', 'restart'])
-            output = f'Restarted dhcpcd service'
-            retry = -1
-            print(output) # TODO: Remove this statement
+            print('Removed the incorrect STATIC IP configuration') # TODO: Remove this statement
+            execo(['/usr/bin/sudo', 'reboot'])
+            print('Restarted dhcpcd service') # TODO: Remove this statement
             # output_on_led(output)
+            retry = -1
             
         print("Retrying in 15 seconds")
         time.sleep(15)
