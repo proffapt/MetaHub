@@ -65,14 +65,12 @@ def main(retry):
 
     except ( IPNotFoundException, IPNotProperlyAssigned ) as e:
         print(e)
-        if retry > 0:
+        if retry == 8:
             ## removing static ip config lines and storing output
             execo(['/usr/bin/sed', '-i', '/#Static IP for PtokaX/,$d', '/etc/dhcpcd.conf'])
-            print('Removed the incorrect STATIC IP configuration') # TODO: Remove this statement
+            print('Removed the incorrect STATIC IP configuration')
+            print('Rebooting..')
             execo(['/usr/bin/sudo', 'reboot'])
-            print('Restarted dhcpcd service') # TODO: Remove this statement
-            # output_on_led(output)
-            retry = -1
             
         print("Retrying in 15 seconds")
         time.sleep(15)
@@ -82,7 +80,7 @@ def main(retry):
         ## start the setup ptokax script
         output = execo(['/home/pi/MetaHub/ptokax-setup.sh'])
         output = output.decode("utf-8").strip()
-        print(output) # TODO: Remove this statement
+        print(output)
         # output_on_led(output)
 
     # Clean up the GPIO
@@ -91,3 +89,4 @@ def main(retry):
 
 if __name__ == "__main__":
     main(0)
+
