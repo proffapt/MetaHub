@@ -22,34 +22,33 @@ o     o   .oPYo.   ooooo        .oo    o    o   o    o    .oPYo.
 
 		Contact Email       -    metahubkgp@gmail.com
 
-		Issue Tracker Form  -    https://bit.ly/3EGsZnD
+		Issue Tracker Form  -    https://bit.ly/dc-issue
 
-		How to Setup Doc    -    https://bit.ly/3S3T3fi
+		How to Setup Guide  -    https://bit.ly/dc-setup
 
 		
 Rules
 =====
 
 * Minimum limit (Will be increased soon)
-	- For connecting: 0 GiB 
-	- For searching and downloading: 0 GiB 
+	- For connecting: 0 GiB
+	- For searching and downloading: 0 GiB
 
 * You will be banned for:
 	- Sharing pornographic/NSFW links, on mainchat.
-	- Sharing fake material. 
+	- Sharing fake material.
 	- Limiting upload speed. Minimum ban time: 8 hours.
 	- Not mirroring stuff that you download.
-	- Sharing crap; like Windows and Program Files directory. 
+	- Sharing crap; like Windows and Program Files directory.
 	  Minimum ban time: 1-3 hours.
 
 -- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --
 
-Hello Kgpians, It is very dissapointing to see that we have such 
-a low user base in DC++. DC community at Kgp was once famous for
-it's rich content and userbase. In order to imporve the userbase,
-we the admins would be having some sessions soon but we wont 
-succeed without your help too. It is requested to each current 
-user to share the word of DC++ and also share as much content as 
-possible. It would be of great help to bring back our glory.
+Fellow Kgpians, it's disappointing to see the declining MetaHub
+userbase. The Kgp DC community was once renowned for its vibrant
+members and content. To restore our hub's former glory, we admins
+plan engagement sessions, but we need your help too. We request
+each user spread the word about DC++ and share content. Together
+we can revitalize our community and thrive again.
 
 -- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --
