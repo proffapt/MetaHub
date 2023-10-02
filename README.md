@@ -1,6 +1,6 @@
-# MetaHub
+# Metahub
 
-![Metahub](https://github.com/proffapt/MetaHub/assets/86282911/e0da45bc-4fe7-4953-8cb4-b9c12633464a)
+![Metahub](https://github.com/proffapt/MetaHub/assets/86282911/462e41c9-f3e1-437a-b1c3-949628ca6b00)
 > **Note** This is a completely student-run hub and is not officially affiliated with IIT Kharagpur.
 
 MetaHub is a Direct Connect ([DC](https://en.wikipedia.org/wiki/Advanced_Direct_Connect)) Hub for IIT Kharagpur. It is a private hub and can only be accessed from within the IIT Kharagpur network. Users can connect to this hub using DC clients and share files at high speeds. The popular hub, "[HiT Hi FiT Hai](https://wiki.metakgp.org/w/HiT_Hi_FiT_Hai)," can also be accessed using this service. The purpose of this repository is to document the server's internal configuration. If you wish to connect to the hub, please refer to the following guide: https://proffapt.hashnode.dev/dc-client-setup.
