@@ -92,10 +92,10 @@ else
 fi
 
 # Updating MOTD with the IP of PI
-IS_IP_UPDATED=$(grep -q "${RASPI_IP%%/*}" /home/pi/MetaHub/PtokaX/cfg/Motd.txt && echo true || echo false)
+IS_IP_UPDATED=$(grep -q "dc.metakgp.org" /home/pi/MetaHub/PtokaX/cfg/Motd.txt && echo true || echo false)
 if [ "$IS_IP_UPDATED" == "false" ]; then
         echo -e "${GREEN}[+] ${BLUE}Modifying ${YELLOW}/home/pi/MetaHub/PtokaX/cfg/Motd.txt${WHITE}"
-        sed -i "s/.*Hub Address.*/          Hub Address        -    ${RASPI_IP%%/*}/" /home/pi/MetaHub/PtokaX/cfg/Motd.txt
+        sed -i "s/.*Hub Address.*/          Hub Address        -    dc.metakgp.org/" /home/pi/MetaHub/PtokaX/cfg/Motd.txt
 else
         echo -e "${YELLOW}[-] ${BLUE}IP is already updated in ${YELLOW}/home/pi/MetaHub/PtokaX/cfg/Motd.txt${WHITE}"
 fi
