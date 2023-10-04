@@ -211,7 +211,7 @@ int16_t SetShortDef[] = {
 };
 
 const char* SetTxtDef[] = {
-    "MetaHub", //HUB_NAME
+    "Metahub", //HUB_NAME
     "Admin", //ADMIN_NICK
     "10.112.5.167", //HUB_ADDRESS
     "1209;411", //TCP_PORTS

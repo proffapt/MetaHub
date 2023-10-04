@@ -1,9 +1,9 @@
 # Metahub
 
-![Metahub](https://github.com/proffapt/MetaHub/assets/86282911/462e41c9-f3e1-437a-b1c3-949628ca6b00)
+![Metahub](https://github.com/proffapt/Metahub/assets/86282911/462e41c9-f3e1-437a-b1c3-949628ca6b00)
 > **Note** This is a completely student-run hub and is not officially affiliated with IIT Kharagpur.
 
-MetaHub is a Direct Connect ([DC](https://en.wikipedia.org/wiki/Advanced_Direct_Connect)) Hub for IIT Kharagpur. It is a private hub and can only be accessed from within the IIT Kharagpur network. Users can connect to this hub using DC clients and share files at high speeds. The popular hub, "[HiT Hi FiT Hai](https://wiki.metakgp.org/w/HiT_Hi_FiT_Hai)," can also be accessed using this service. The purpose of this repository is to document the server's internal configuration. If you wish to connect to the hub, please refer to the following guide: https://proffapt.hashnode.dev/dc-client-setup.
+Metahub is a Direct Connect ([DC](https://en.wikipedia.org/wiki/Advanced_Direct_Connect)) Hub for IIT Kharagpur. It is a private hub and can only be accessed from within the IIT Kharagpur network. Users can connect to this hub using DC clients and share files at high speeds. The popular hub, "[HiT Hi FiT Hai](https://wiki.metakgp.org/w/HiT_Hi_FiT_Hai)," can also be accessed using this service. The purpose of this repository is to document the server's internal configuration. If you wish to connect to the hub, please refer to the following guide: https://proffapt.hashnode.dev/dc-client-setup.
 
 ## Host Device Specifications
 
@@ -46,10 +46,10 @@ OS : Rasbian 64 Bit
 
 Run the follwoing set of commands to get the `ipofpi.sh` script and execute it.
 ```bash
-git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch MetaHub
-mv MetaHub/ipofpi.sh ./
+git clone https://github.com/proffapt/Metahub --depth 1 --branch main --single-branch Metahub
+mv Metahub/ipofpi.sh ./
 chmod +x ipofpi.sh
-rm -rf MetaHub
+rm -rf Metahub
 ./ipofpi.sh
 ```
    
@@ -94,10 +94,10 @@ In my case it's `eth0`.
 
 1. __Clone__ the repository in a _structured manner_ and _remove unnecessary files_, then execute the setup script using the following set of commands.
     ```bash
-    git clone https://github.com/proffapt/MetaHub --depth 1 --branch main --single-branch /home/pi/MetaHub
-    sudo rm -rf /home/pi/MetaHub/.git /home/pi/MetaHub/README.md /home/pi/MetaHub/ipofpi.sh
-    chmod +x /home/pi/MetaHub/ptokax-setup.sh
-    ./MetaHub/ptokax-setup.sh
+    git clone https://github.com/proffapt/Metahub --depth 1 --branch main --single-branch /home/pi/Metahub
+    sudo rm -rf /home/pi/Metahub/.git /home/pi/Metahub/README.md /home/pi/Metahub/ipofpi.sh
+    chmod +x /home/pi/Metahub/ptokax-setup.sh
+    ./Metahub/ptokax-setup.sh
     source ~/.bashrc
     ```
 
@@ -170,7 +170,7 @@ Edit `~/PtokaX/cfg/Motd.txt`
     - PtokaX/core/SettingDefaults.h
       ```bash
       const char* SetTxtDef[] = {
-          "MetaHub", //HUB_NAME
+          "Metahub", //HUB_NAME
           "Admin", //ADMIN_NICK
           "10.112.5.167", //HUB_ADDRESS
           "1209;411", //TCP_PORTS
@@ -186,7 +186,7 @@ Edit `~/PtokaX/cfg/Motd.txt`
 
       ```bash
       # Hub name. Minimal length 1, maximal length 256. $ and | is not allowed
-      #HubName	=	MetaHub
+      #HubName	=	Metahub
       # Admin nick. Minimal length 1. Maximal length 64. $, | and space is not allowed
       #AdminNick	=	Admin
       # Hub address. Minimal length 1. Maximal length 256. $ and | is not allowed
