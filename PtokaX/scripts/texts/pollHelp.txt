@@ -1,0 +1,23 @@
+
+POLLS
+================
+
+While any user can participate in an ongoing poll, only registered users are allowed to
+create new ones. The following commands are available to the end users:
+
+    !poll add <msg> - To add a new poll to the database. The format for providing list of
+        choices is as follows:
+
+            !poll add Is this feature awesome?[]Yes [] No[]Maybe
+
+        NOTE: Spaces around the `[]` delimiters will be ignored.
+
+    !poll remove <#ID> - Provide a valid ID for a poll to delete it.
+
+    !poll view <#ID> - Detailed voting break-down for the poll with provided ID will be returned.
+
+    !poll list [<#Limit>] - Default limit is 15. only the most recent #Limit polls will be displayed.
+
+    !poll vote <#Poll> <#Choice> - Cast your vote for the #Choice of the poll with ID #Poll.
+
+    !poll help - Display help selectively for the polling features.

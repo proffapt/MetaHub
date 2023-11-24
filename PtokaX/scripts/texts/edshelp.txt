@@ -1,0 +1,21 @@
+!say <nick> <message>                           Send a message on mainchat as someone else
+!drop <nick>                                    Disconnect (drop) a user
+!warn <nick> <reason>                           Send a warning on mainchat as the mainbot
+!kick <nick> <reason>                           Disconnect the victim and tempban him/her for 10 mins
+!mute <nick>                                    Mute the  victim indefinitely, preventing him/her from posting on mainchat	
+!unmute <nick>                                  Unmute the person
+!foreveralone <nick>                            Hellban the person i.e only he/she can see their posts on mainchat
+!nomorealone <nick>                             Remove the hellban
+!changenick <original_nick> <new_nick>  Change the nick of the vicitim on mainchat
+!revertnick <original_nick>                     Undo the effect of !changenick
+!unsub                                          Unsubscribe from mainchat -
+!sub                                                    Subscribe back to mainchat
+!me <message>                                   Speak in third person.Identical to /me command on IRC, !me <message>
+!desu                                                   Toggles desu variable .if desu is true , appends desu to every message on mainchat	
+!san                                                    Toggles san variable.If san is true, appends -san to every nick on mainchat .Example - Brick -> Brick-san
+!chan                                           Toggles chan variable.If chan is true, appends -chan to every nick on mainchat .Example - Brick -> Brick-chan
+!send <message>                                 Send message to all in the form of raw data(without adding any dcprotocol keywords) .
+!changereg <user_nick> <profile_num     Change the profile of a registered user. >
+!getpass <nick>                                 Get the password of a registered user
+!clrpassbans                                    Clear the automatic bans done due to incorrect password input .
+

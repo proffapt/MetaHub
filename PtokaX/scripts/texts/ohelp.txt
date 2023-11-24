@@ -1,0 +1,79 @@
+
+The commands are divided into following sub-sections:
+
+	 - For all users:
+	+latest; +search; +sc; +sm; +help; +rules
+
+	 - For moderators:
+	+addlatest; +dellatest; +updatelatest; +addmagnet; +editmagnet; +removemagnet
+
+	 - For VIP and above
+	+addmod; +delmod
+
+Detailed guide on USAGE
+
+FOR ALL USERS
+-------------------------------------------------------------
+
++latest (or simply +l) can be used in one of the following ways:
+
+01. +l
+	This will just list the newest 35 entries from the latest database sorted by the date. You can supply a number greater than 5
+	  and smaller than 35 to limit result to those many entries.
+
+02. +l <ctg>
+	Any of the categories can be given as argument. You'll get a default 20 entries if the category exists otherwise works same as
+	  +latest. An additional limit number can be provided.
+
++search (or +s) must be given with a search string of length greater than 3 characters. Restricting results from particular
+    categories can be done by passing categories inside curly braces.
+
++showctg (or +sc) lists all the available categories. Helpful for both new moderators and users.
+
++showmods (or +sm) lists all current moderators on the hub.
+
++rules ( or +r ) populatest the general rules for entries.
+
++help ( or +h ) shows this help.
+
+
+FOR MODERATORS
+-------------------------------------------------------------
+
++addlatest( or +al ) must be followed with a category, entry string and magnet in that order. A descriptive rules for formatting
+    and other details are explained under rules. General rules can be accessed using +rules( or +rules )
+
++updatelatest( or +ul ) should be followed by the entry ID and new string. If the entry was not made by you, you can not update it.
+
++dellatest( or +dl ) accepts one or more numerical argument, the entry ID from latest entries. Deletes the specific row(s) from
+    latenst entries table matching the given ID(s). If the row doesn't exist in table, an error is thrown.
+
++addmagnet( or +am ) requires atleast 2 arguments. The addition entry ID and the magnet to be added. The ID must be a valid entry
+    from the table. Non-numerical values are not accepted. You can pass more than one magnet URI for the same entry.
+
++editmagnet( or +em ) does the same task as `+em` except only for magnet ID. They are shown with the respective magnet in latest
+    table display.
+
++removemagnet( or +rm ) must be passed with a valid numerical magnet ID. It removes the magnet associated with that ID. More
+    than one IDs can be passed by separating each with a space.
+
+
+FOR VIPs & ABOVE USERS
+-------------------------------------------------------------
+
+In addition to all the commands above, following commands have also been made available to you:
+
++addmod requires one argument, being the nickname of a registered user on hub. It adds the user to moderators list, so that they
+    can also add entries to latest database.
+
++delmod just deletes the user(nick passed as argument) from moderator privileges.
+
+
+FOR HUB OPERATORS & ADMINISTRATORS
+-------------------------------------------------------------
+
+The hub administrators have the following commands available to them in addition to the ones listed above:
+
++addctg to add a new category to the list of available categories for addition of newer entries.
+
++delctg to delete a category from the list of available categories for addition of entries.
