@@ -126,14 +126,6 @@ else
 	echo -e "${YELLOW}[-] ${BLUE}PtokaX already installed${WHITE}"
 fi
 
-# Getting PtokaX scripts
-if [ ! -d /home/pi/Metahub/PtokaX/scripts ]; then
-	echo -e "${GREEN}[+] ${BLUE}Downloading Hit Hi Fit Hai scripts${WHITE}"
-	git clone https://github.com/sheharyaar/ptokax-scripts /home/pi/Metahub/PtokaX/scripts/
-else
-	echo -e "${YELLOW}[-] ${BLUE}Hit Hi Fit Hai scripts already exist${WHITE}"
-fi
-
 # Handling PtokaX service
 if [ ! -f /etc/systemd/system/ptokax.service ]; then
 	echo -e "${GREEN}[+] ${BLUE}Creating PtokaX service${WHITE}"

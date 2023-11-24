@@ -1,0 +1,35 @@
+
+CHAT STATISTICS
+================
+
+The following commands have been made available to all users:
+
+	+top [<date>] [#Limit]: Top chatterers of the day. Optional date argument can be passed
+		in YYYY-MM-DD format. Argument #Limit is optional as well. Default limit is 10.
+
+	+topall [#Limit]: Top chatterers of all time. Argument #Limit is optional. Default limit is 10.
+
+The following commands are available for all users, but result will be produced only for
+registered users. Unregistered users may either receive an error or undesired behaviour.
+
+	+see: To get chat statistics for self.
+
+	+score <nick>: To fetch statistics of a registered user with nick as passed as arguments.
+
+
+TOKS
+================
+
+Toks is recorded only for registered users.
+
+	+toks <nick> - To fetch toks record of a registered user with nick as passed as
+	arguments. Nick is optional, if not passed default value would be your nick.
+
+	+rich [#limit] - Users with highest toks currently. Argument #Limit is optional. If
+	not passed, default value would be 15.
+
+	+richest [#limit] - Users with highest toks over all time. Argument #Limit is
+	optional. If not passed, default value would be 15.
+
+	+gift <nick> <#amount> <message> - To gift specified amount of toks to registered
+	user with the given nick. Message is optional.

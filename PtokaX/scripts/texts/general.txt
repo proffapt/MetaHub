@@ -1,0 +1,113 @@
+﻿
+For ALL additions
+================
+
+## TO BECOME A MODERATOR
+
+To become a moderator on the hub, you need to have added at least 10 entries to the entries database over the last 3 months (A.K.A. current semester). You can ask other fellow moderators(to get list of moderatos, use "+help" with [BOT]Offliner). After becoming a moderator, you are required to follow these basic addition formats.
+
+The addition commands are listed in help file too. Here's a quick tour of them all:
+
+- `al` or `addlatest`: To add an `<entry>` to latest under category `<ctg>` with linked magnet `<magnet>`.
+
+        +al <ctg> <entry> <magnet>
+- `ul` or `updatelatest`: To update an older entry (by yourself) to `<entry>`.
+
+        +ul <id> <entry>
+- `dl` or `dellatest`: To remove entirely a row from latest database having the `id = <id>`. The associated magnets are removed too.
+
+        +dl <id>
+- `am` or `addmagnet`: To add another <magnet> to database for an entry with `id = <id>`.
+
+        +am <id> <magnet>
+- `em` or `editmagnet`: To edit a previous magnet with the newer <magnet> for the `magnetID = <mid>`.
+
+        +em <mid> <magnet>
+- `rm` or `removemagnet`: To remove a single magnet with the `magnetID = <mid>`.
+
+        +rm <mid>
+
+> Individual category rules are existent too. Take your own time to ***READ*** and ***REREAD*** them all.
+
+
+## RULES
+
+01. Sizes MUST be the last tag in your entry (**magnets are *NOT* tags**). Exception allowed only for `[DnS by <nick> ]` case.
+02. All tags must be enclosed in square brackets with a blank space between each of them.
+03. You must actively add at least 5 useful entries per month to remain as a moderator. Failing to do so will lead you to get demoderated.
+04. After demoderation, you can be re-assigned as moderator in the next semester only.
+05. If your addition is misspelt or wrong, you HAVE to edit it. Always listen to fellow moderators.
+06. Spamming database with entries (like adding 10 additions in 30 minutes) is again punishable. This is not a STRICT rule as long as your additions are to separate categories.
+07. Magnets are not to be closed in tags in any circumstance.
+08. Keeping the filename same as your entry is a good way to keep data sorted.
+09. Entries must not be ALL CAPS or ALL SMALL. The tags MUST BE either ALL CAPS or Sentence Case except link/size depending on the length.
+10. You are always able to delete your own additions. But, VIP+ have powers to delete your additions too. If the number of deletions not by you reaches 5, you will be demoderated automatically.
+11. If you want to add something which was once added previously, but is not anymore on DC++, you must tag the entry with "[ReShare]" and atleast 3 months must've passed for the previous entry.
+
+
+## SIZES
+
+Sizes MUST BE the LAST tag in your entry. Exception allowed ONLY FOR "[DnS by &lt;nick&gt; ]" case. The sizes must be mentioned in the following format:
+
+`[XXX MiB]` - For tagging an entry with XXX Mebibytes size.
+
+`[YYY.ZZ GiB]` - For tagging an entry with YYY.ZZ Gibibytes size.
+
+The sizes must be either whole nuber, or 2 digit decimal-precision floating numbers. So, tags like `[26.3 MB]` are wrong. Also, space before the unit is mandatary. Except other tags, the link and size tags must be suffixed to entries.
+
+
+## QUALITY
+
+The following quality tags are acceptable:
+
+ - For Videos
+
+    * [HDTV] &rarr; HDTV Rip in XviD ~352 or ~404 pixels (height). Sometimes, [SDTV] and [PDTV] are also allowed.
+    * [DVDRip] &rarr; They are official DVDRip sized ~480p (height)
+    * [720p] &rarr; 720 pixels height
+    * [1080p] &rarr; 1080 pixels height
+    * [BluRay] [720p] &rarr; Original BluRay for the entry is released
+    * [m720p] &rarr; Mini MKV releases.
+    * [m1080p] &rarr; Mini MKV Widescreen releases.
+
+    There are other tags in use too, like [WEB-DL] etc. If something is [WEB-DL] then generally it is official iTunes released stuff, and hence, can be tagged "[BRRip] [720p]" or "[BluRay] [720p]".
+
+ - For Audio
+
+    * [FLAC] &rarr; Lossless Audio Codecs. (No need to mention bit-rates with this tag)
+    * [MP3] &rarr; Usual for MP3 files. You **SHOULD** include bit-rates with them
+    * [XXX kBps] &rarr; This is for tagging XXX bitrates in Kilobytes/s. XXX should be a whole number and must be followed by a blank space.
+
+ - For Games and Apps
+
+    * [PC] &rarr; This implies a PC platform game/app. It can be skipped by default.
+    * [WIN] &rarr; This means a Windows compatible game/app. Can be skipped; but atleast one of [PC] or [WIN] must be mentioned.
+    * [ISO] &rarr; File container/storage type. Explained with details in related categories.
+
+## LINKS
+
+The links should be added with a **MANDATORY `http://`** prepended to them. The useful websites for each categories have been mentioned in respective category rules. All links MUST be tagged with pre and post-appended blank space. Tags like `[http://google.co.in]` is not acceptable. They must look like `[ http://google.co.in ]`.
+
+You can add multiple SHORT links to same entry. Only the link and size tags are to be suffixed to entries. The URL shorteners to be used are:
+
+ * [http://goo.gl][goo]
+ * [http://bit.ly][bit]
+ * [http://tinyurl.com][tiny].
+
+## MAGNETS
+
+Magnets are the newest of feature included for entries. Hence, not all entries have a magnet associated to them. Your entries shall extract magnet from the command itself. But, you MUST NOT put the magnets inside tags or edit the magnets out to the smallest of part (like TTH). Just put the entire magnet in thecommand, and let our hard-worked code do some magic?
+
+The point of latest is to serve primarily as a flag to determine whether something is available on the hub or not, and secondarily as a database. With that in mind, try to use your common sense and not clutter up additions. Enough information, but not too much information, and leave out the obvious. Assume a user will use his head a bit if in doubt, and do so yourself too.
+
+## COUNTRY & LANGUAGE
+
+The country and language tags are optional for USA released content. But they are necessary for other additions. Please use the ISO-639-2 list ([Wiki][iso-wiki] or [Library of Congress][iso-loc]) for the 3 character country and language codes. Exceptional cases (if and when applicable) will be described as per category rules.
+
+To sum it all up, have fun. Do take some time to READ and REREAD the rules. For any errors encountered; ask directly in ***#[ModzChat]*** chatroom.
+
+  [goo]: http://goo.gl
+  [tiny]: http://tinyurl.com
+  [bit]: http://bit.ly
+  [iso-wiki]: https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes "List of ISO 639-2 codes"
+  [iso-loc]: http://www.loc.gov/standards/iso639-2/php/code_list.php "Codes for the Representation of Names of Languages"
